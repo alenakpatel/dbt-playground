@@ -1,0 +1,15 @@
+ae_playground:
+  target: dev
+  outputs:
+    dev:
+      type: trino
+      method: ldap
+      user: "{{ env_var('TRINO_USER') }}"
+      password: "{{ env_var('TRINO_PASSWORD') }}"
+      host: "{{ env_var('TRINO_HOST') }}"
+      port: "{{ env_var('TRINO_PORT') | int }}"
+      http_scheme: https
+      catalog: "{{ env_var('TRINO_CATALOG', 'iceberg') }}"
+      schema: "{{ env_var('TRINO_SCHEMA', 'pond_alenakp') }}"
+      threads: 4
+      timezone: "America/New_York"
