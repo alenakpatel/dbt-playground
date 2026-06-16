@@ -1,0 +1,17 @@
+# Secrets — never commit
+.env
+.env.local
+
+# Python virtual environment
+.venv/
+__pycache__/
+*.py[cod]
+
+# dbt build output (regenerated on every run)
+ae_playground/target/
+ae_playground/dbt_packages/
+ae_playground/logs/
+ae_playground/.user.yml
+
+# OS noise
+.DS_Store

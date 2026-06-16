@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: blackboard
+    database: iceberg
+    schema: blackboard_xform
+    tables:
+      - name: course_main
+      - name: users
+      - name: activity_accumulator
+      - name: gradebook_grade
+      - name: gradebook_main
+      - name: course_users_counts
+      - name: course_users

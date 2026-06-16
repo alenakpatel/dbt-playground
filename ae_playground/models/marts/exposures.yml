@@ -1,0 +1,12 @@
+version: 2
+
+exposures:
+  - name: course_engagement_report
+    type: dashboard
+    description: "Shows course engagement levels for the last 3 months"
+    depends_on:
+      - ref('mart_course_engagement')
+      - ref('mart_student_activity')
+    owner:
+      name: Alena Patel
+      email: alenakp@bu.edu

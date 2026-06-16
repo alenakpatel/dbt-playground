@@ -30,6 +30,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   ae_playground:
-    # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
+      +tags: ['staging']
+    marts:
+      +materialized: view
+      +tags: ['marts']
+
+vars:
+  activity_lookback_months: 3

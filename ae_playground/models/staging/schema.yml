@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: stg_users
+    description: "One row per user from the Blackboard users table"
+    columns:
+      - name: user_key
+        description: "Primary key for the user"
+        tests:
+          - not_null
+      - name: user_id
+        description: "Human readable user ID e.g. alenakp"
+        tests:
+          - not_null
+      - name: status
+        description: "Whether the user account is active or not"
+
+  - name: stg_courses
+    description: "One row per course from course_main"
+    columns:
+      - name: course_key
+        description: "Primary key for the course"
+        tests:
+          - not_null
+      - name: course_id
+        description: "Human readable course ID"
+        tests:
+          - not_null
+
+  - name: stg_grades
+    description: "Grade entries joining gradebook_grade and gradebook_main"
+    columns:
+      - name: grade_key
+        description: "Primary key for the grade"
+        tests:
+          - not_null
+
+  - name: stg_activity
+    description: "One row per activity event from activity_accumulator"
+    columns:
+      - name: activity_key
+        description: "Primary key for the activity event"
+        tests:
+          - not_null
+      - name: user_key
+        description: "Foreign key to stg_users, nullable for system events"
+        tests:
+          - relationships:
+              to: ref('stg_users')
+              field: user_key
+              config:
+                severity: warn

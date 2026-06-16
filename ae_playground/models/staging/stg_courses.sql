@@ -12,7 +12,7 @@ renamed as (
         course_name,
         start_date,
         end_date,
-        row_status   as status
+        {{ decode_status('row_status') }} as status
     from source
 
 )

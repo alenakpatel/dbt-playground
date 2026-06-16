@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: mart_student_activity
+    description: "One row per student per course showing total activity events and first/last activity timestamps. Filtered to last 3 months."
+    columns:
+      - name: user_id
+        description: "Human readable student ID"
+      - name: course_name
+        description: "Full name of the course"
+      - name: total_activity_events
+        description: "Count of all activity events for this student in this course"
+      - name: first_activity
+        description: "Timestamp of the student's first recorded activity in the course"
+      - name: last_activity
+        description: "Timestamp of the student's most recent activity in the course"

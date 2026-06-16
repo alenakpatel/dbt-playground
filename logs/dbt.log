@@ -27,3 +27,145 @@ Happy modeling!
 [0m15:18:06.763882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ac9220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a5c290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b2b790>]}
 [0m15:18:06.764143 [debug] [MainThread]: Flushing usage events
 [0m15:18:06.978855 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:08:28.105652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d28c2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1c3390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1c34d0>]}
+
+
+============================== 16:08:28.108356 | 1ebc3005-0136-43db-81c3-ec68b69b755a ==============================
+[0m16:08:28.108356 [info ] [MainThread]: Running with dbt=1.11.11
+[0m16:08:28.108629 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'invocation_command': 'dbt debug', 'introspect': 'True', 'write_json': 'True', 'empty': 'None', 'quiet': 'False', 'partial_parse': 'True', 'profiles_dir': './ae_playground', 'log_cache_events': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'static_parser': 'True', 'log_format': 'default', 'printer_width': '80', 'debug': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'target_path': 'None'}
+[0m16:08:28.116222 [info ] [MainThread]: dbt version: 1.11.11
+[0m16:08:28.116419 [info ] [MainThread]: python version: 3.13.13
+[0m16:08:28.116544 [info ] [MainThread]: python path: /Users/alenapatel/dbt-playground/.venv/bin/python3
+[0m16:08:28.116660 [info ] [MainThread]: os info: macOS-26.4.1-arm64-arm-64bit-Mach-O
+[0m16:08:28.155928 [info ] [MainThread]: Using profiles dir at ./ae_playground
+[0m16:08:28.156165 [info ] [MainThread]: Using profiles.yml file at ./ae_playground/profiles.yml
+[0m16:08:28.156294 [info ] [MainThread]: Using dbt_project.yml file at /Users/alenapatel/dbt-playground/dbt_project.yml
+[0m16:08:28.156407 [info ] [MainThread]: adapter type: trino
+[0m16:08:28.156515 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:08:28.156663 [info ] [MainThread]: Configuration:
+[0m16:08:28.156765 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:08:28.156879 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:08:28.156987 [info ] [MainThread]: Required dependencies:
+[0m16:08:28.157157 [debug] [MainThread]: Executing "git --help"
+[0m16:08:28.171950 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:08:28.172393 [debug] [MainThread]: STDERR: "b''"
+[0m16:08:28.172537 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:08:28.172678 [info ] [MainThread]: Connection:
+[0m16:08:28.172824 [info ] [MainThread]:   host: trino.de-eks-nonprod.bu.edu
+[0m16:08:28.172938 [info ] [MainThread]:   port: 443
+[0m16:08:28.173043 [info ] [MainThread]:   user: usr_scoped_alenakp
+[0m16:08:28.173142 [info ] [MainThread]:   database: iceberg
+[0m16:08:28.173244 [info ] [MainThread]:   schema: playground_usr_scoped_alenakp
+[0m16:08:28.173354 [info ] [MainThread]:   cert: None
+[0m16:08:28.173456 [info ] [MainThread]:   prepared_statements_enabled: True
+[0m16:08:28.173749 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m16:08:28.228697 [debug] [MainThread]: Acquiring new trino connection 'debug'
+[0m16:08:28.259621 [debug] [MainThread]: Using trino connection "debug"
+[0m16:08:28.259794 [debug] [MainThread]: On debug: select 1 as id
+[0m16:08:28.259905 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:08:28.260004 [warn ] [MainThread]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m16:08:28.260214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '1ebc3005-0136-43db-81c3-ec68b69b755a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e59f230>]}
+[0m16:08:28.598029 [debug] [MainThread]: SQL status: SUCCESS in 0.338 seconds
+[0m16:08:28.599174 [debug] [MainThread]: On debug: Close
+[0m16:08:28.600306 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:08:28.600699 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:08:28.601008 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/alenapatel/dbt-playground/dbt_project.yml> not found
+
+[0m16:08:28.601657 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.5322798, "process_in_blocks": "0", "process_kernel_time": 0.169165, "process_mem_max_rss": "125239296", "process_out_blocks": "0", "process_user_time": 0.583175}
+[0m16:08:28.602149 [debug] [MainThread]: Command `dbt debug` failed at 16:08:28.602027 after 0.53 seconds
+[0m16:08:28.602520 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:08:28.602899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e658050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6599d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e899a50>]}
+[0m16:08:28.603212 [debug] [MainThread]: Flushing usage events
+[0m16:08:28.804637 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:11:41.051396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c4882f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3bb390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3bb4d0>]}
+
+
+============================== 16:11:41.054052 | c03f92cd-aa51-49e9-9c3c-5bd95eb7918a ==============================
+[0m16:11:41.054052 [info ] [MainThread]: Running with dbt=1.11.11
+[0m16:11:41.054320 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'profiles_dir': '/Users/alenapatel/dbt-playground/ae_playground', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'target_path': 'None', 'empty': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'log_path': 'logs', 'use_experimental_parser': 'False', 'warn_error': 'None', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'no_print': 'None', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'log_format': 'default', 'version_check': 'True', 'debug': 'False'}
+[0m16:11:41.061824 [info ] [MainThread]: dbt version: 1.11.11
+[0m16:11:41.062009 [info ] [MainThread]: python version: 3.13.13
+[0m16:11:41.062130 [info ] [MainThread]: python path: /Users/alenapatel/dbt-playground/.venv/bin/python3
+[0m16:11:41.062247 [info ] [MainThread]: os info: macOS-26.4.1-arm64-arm-64bit-Mach-O
+[0m16:11:41.100292 [info ] [MainThread]: Using profiles dir at /Users/alenapatel/dbt-playground/ae_playground
+[0m16:11:41.100540 [info ] [MainThread]: Using profiles.yml file at /Users/alenapatel/dbt-playground/ae_playground/profiles.yml
+[0m16:11:41.100666 [info ] [MainThread]: Using dbt_project.yml file at /Users/alenapatel/dbt-playground/dbt_project.yml
+[0m16:11:41.100776 [info ] [MainThread]: adapter type: trino
+[0m16:11:41.100880 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:11:41.101006 [info ] [MainThread]: Configuration:
+[0m16:11:41.101109 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:11:41.101217 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:11:41.101314 [info ] [MainThread]: Required dependencies:
+[0m16:11:41.101488 [debug] [MainThread]: Executing "git --help"
+[0m16:11:41.113733 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:11:41.114172 [debug] [MainThread]: STDERR: "b''"
+[0m16:11:41.114319 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:11:41.114464 [info ] [MainThread]: Connection:
+[0m16:11:41.114614 [info ] [MainThread]:   host: trino.de-eks-nonprod.bu.edu
+[0m16:11:41.114739 [info ] [MainThread]:   port: 443
+[0m16:11:41.114842 [info ] [MainThread]:   user: usr_scoped_alenakp
+[0m16:11:41.114945 [info ] [MainThread]:   database: iceberg
+[0m16:11:41.115057 [info ] [MainThread]:   schema: playground_usr_scoped_alenakp
+[0m16:11:41.115160 [info ] [MainThread]:   cert: None
+[0m16:11:41.115262 [info ] [MainThread]:   prepared_statements_enabled: True
+[0m16:11:41.115536 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m16:11:41.164555 [debug] [MainThread]: Acquiring new trino connection 'debug'
+[0m16:11:41.190286 [debug] [MainThread]: Using trino connection "debug"
+[0m16:11:41.190447 [debug] [MainThread]: On debug: select 1 as id
+[0m16:11:41.190553 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:11:41.190648 [warn ] [MainThread]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m16:11:41.190851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'c03f92cd-aa51-49e9-9c3c-5bd95eb7918a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7cb230>]}
+[0m16:11:41.453846 [debug] [MainThread]: SQL status: SUCCESS in 0.263 seconds
+[0m16:11:41.454939 [debug] [MainThread]: On debug: Close
+[0m16:11:41.457135 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:11:41.457429 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:11:41.457656 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/alenapatel/dbt-playground/dbt_project.yml> not found
+
+[0m16:11:41.458225 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.44098264, "process_in_blocks": "0", "process_kernel_time": 0.163979, "process_mem_max_rss": "125091840", "process_out_blocks": "0", "process_user_time": 0.584049}
+[0m16:11:41.458619 [debug] [MainThread]: Command `dbt debug` failed at 16:11:41.458535 after 0.44 seconds
+[0m16:11:41.458886 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:11:41.459164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d884050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d8859d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dac5a50>]}
+[0m16:11:41.459465 [debug] [MainThread]: Flushing usage events
+[0m16:11:41.550406 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:02:50.902076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8c42f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b887610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b887750>]}
+
+
+============================== 19:02:50.904839 | 0214cb24-b231-4801-8418-93374c64ccef ==============================
+[0m19:02:50.904839 [info ] [MainThread]: Running with dbt=1.11.11
+[0m19:02:50.905111 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'partial_parse': 'True', 'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'invocation_command': 'dbt run --select stg_courses.sql', 'log_format': 'default', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_path': 'logs', 'empty': 'False', 'introspect': 'True', 'profiles_dir': '/Users/alenapatel/dbt-playground/ae_playground', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'use_colors': 'True', 'quiet': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m19:02:50.905400 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/alenapatel/dbt-playground/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:02:50.905681 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.043263707, "process_in_blocks": "0", "process_kernel_time": 0.106166, "process_mem_max_rss": "112295936", "process_out_blocks": "0", "process_user_time": 0.51205}
+[0m19:02:50.905906 [debug] [MainThread]: Command `dbt run` failed at 19:02:50.905865 after 0.04 seconds
+[0m19:02:50.906053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b8136f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b807d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b892e00>]}
+[0m19:02:50.906183 [debug] [MainThread]: Flushing usage events
+[0m19:02:51.138221 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:13:27.248176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8342f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7eb610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7eb750>]}
+
+
+============================== 19:13:27.250663 | 01bf436c-e43f-41e0-b7eb-d5e7e828a79c ==============================
+[0m19:13:27.250663 [info ] [MainThread]: Running with dbt=1.11.11
+[0m19:13:27.250939 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'log_path': 'logs', 'log_format': 'default', 'cache_selected_only': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'partial_parse': 'True', 'warn_error': 'None', 'static_parser': 'True', 'profiles_dir': '/Users/alenapatel/dbt-playground/ae_playground', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run --select myself', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'write_json': 'True', 'printer_width': '80', 'version_check': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'target_path': 'None', 'log_cache_events': 'False', 'empty': 'False'}
+[0m19:13:27.251218 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/alenapatel/dbt-playground/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:13:27.251494 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.04054883, "process_in_blocks": "0", "process_kernel_time": 0.090997, "process_mem_max_rss": "112508928", "process_out_blocks": "0", "process_user_time": 0.578461}
+[0m19:13:27.251728 [debug] [MainThread]: Command `dbt run` failed at 19:13:27.251681 after 0.04 seconds
+[0m19:13:27.251879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7875c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d77bd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d806e00>]}
+[0m19:13:27.252005 [debug] [MainThread]: Flushing usage events
+[0m19:13:27.339875 [debug] [MainThread]: An error was encountered while trying to flush usage events
