@@ -14,3 +14,89 @@ models:
         description: "Timestamp of the student's first recorded activity in the course"
       - name: last_activity
         description: "Timestamp of the student's most recent activity in the course"
+
+  - name: mart_course_engagement
+    description: "Course-level engagement summary for the last 3 months. One row per course showing student counts, activity volume, and average engagement per student."
+    columns:
+      - name: course_id
+        description: "Human readable course ID"
+      - name: course_name
+        description: "Full name of the course"
+      - name: course_status
+        description: "Whether the course is Active or Disabled"
+      - name: unique_active_students
+        description: "Number of distinct students with at least one activity event"
+      - name: total_activity_events
+        description: "Total number of activity events across all students in the course"
+      - name: first_activity
+        description: "Timestamp of the first recorded activity event in the course"
+      - name: last_activity
+        description: "Timestamp of the most recent activity event in the course"
+      - name: avg_events_per_student
+        description: "Average number of activity events per student in the course"
+
+  - name: mart_student_risk
+    description: "Flags students who are active on Blackboard but receiving low grades. One row per student per course. Useful for academic support targeting."
+    columns:
+      - name: user_id
+        description: "Human readable student ID"
+      - name: first_name
+        description: "Student first name"
+      - name: last_name
+        description: "Student last name"
+      - name: course_id
+        description: "Human readable course ID"
+      - name: course_name
+        description: "Full name of the course"
+      - name: total_activity_events
+        description: "Total activity events for this student in this course"
+      - name: last_active
+        description: "Timestamp of the student's most recent activity"
+      - name: avg_score
+        description: "Average raw score across all graded items"
+      - name: avg_max_score
+        description: "Average maximum possible score across all graded items"
+      - name: total_graded_items
+        description: "Number of graded items for this student in this course"
+      - name: grade_pct
+        description: "Average grade as a percentage of max possible score"
+      - name: risk_level
+        description: "High Risk (active, grade < 70%), Medium Risk (active, grade < 80%), or On Track"
+
+  - name: mart_engagement_trends
+    description: "Weekly activity trends per course from January to mid-May 2026. One row per course per week. Used to identify engagement patterns across the semester."
+    columns:
+      - name: course_id
+        description: "Human readable course ID"
+      - name: course_name
+        description: "Full name of the course"
+      - name: week_start
+        description: "Start of the week (truncated to Monday)"
+      - name: unique_students
+        description: "Number of distinct students active that week"
+      - name: total_events
+        description: "Total activity events that week"
+
+  - name: mart_faculty_workload
+    description: "Course-level workload tiers based on total activity volume. Helps IS&T prioritize support and resource allocation."
+    columns:
+      - name: course_id
+        description: "Human readable course ID"
+      - name: course_name
+        description: "Full name of the course"
+      - name: course_status
+        description: "Whether the course is Active or Disabled"
+      - name: unique_active_students
+        description: "Number of distinct students with at least one activity event"
+      - name: total_activity_events
+        description: "Total activity events in the course"
+      - name: avg_events_per_student
+        description: "Average activity events per student"
+      - name: first_activity
+        description: "Timestamp of the first recorded activity in the course"
+      - name: last_activity
+        description: "Timestamp of the most recent activity in the course"
+      - name: active_days
+        description: "Number of days between first and last recorded activity"
+      - name: workload_tier
+        description: "Very High (>1M events), High (>100k), Medium (>10k), or Low"
