@@ -100,3 +100,15 @@ models:
         description: "Number of days between first and last recorded activity"
       - name: workload_tier
         description: "Very High (>1M events), High (>100k), Medium (>10k), or Low"
+
+  - name: mart_grade_distribution
+    description: "One row per graded assignment per student. Grade buckets based on score percentage. Note: zeros may reflect grades stored in external tools like Gradescope rather than true non-submissions. Bad data filtered: negative scores and max_score above 10,000 excluded."
+    columns:
+      - name: grade_bucket
+        description: "A (90-100%), B (80-89%), C (70-79%), D (60-69%), F (below 60%), or Zero. Zero includes both unsubmitted work and assignments graded outside Blackboard."
+      - name: grade_pct
+        description: "Score as a percentage of max possible score"
+      - name: assignment_title
+        description: "Name of the graded assignment"
+      - name: course_name
+        description: "Full name of the course"

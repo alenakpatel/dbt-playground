@@ -12,3 +12,5 @@ sources:
       - name: gradebook_main
       - name: course_users_counts
       - name: course_users
+      - name: course_contents
+      - name: telem_activity_summary
